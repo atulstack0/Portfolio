@@ -3,9 +3,14 @@
     "use strict";
   
       // COLOR MODE
+      let themeClicks = 0;
       $('.color-mode').click(function(){
           $('.color-mode-icon').toggleClass('active')
           $('body').toggleClass('dark-mode')
+          themeClicks++;
+          if (themeClicks >= 3) {
+              window.location.href = 'ai-portfolio.html';
+          }
       })
   
       // HEADER
